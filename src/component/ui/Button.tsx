@@ -20,11 +20,11 @@ const sizeStyles = {
     "lg": 'py-4 px-6'
 }
 
-const defaultStyles = "rounded-md pl-2 pr-2"
+const defaultStyles = "rounded-md px-4 py-2 font-light flex items-center"
 
 export const Button = (props: ButtonProps) => {
     return (
-        <button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}><div className="flex items-center">{props.startIcon ? <div className="pr-2">{props.startIcon}</div> : null} {props.text} {props.endIcon}</div></button>
+        <button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}><div className="pr-2">{props.startIcon}</div> {props.text} {props.endIcon}</button>
     )
 }
 
