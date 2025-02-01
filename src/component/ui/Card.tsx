@@ -1,3 +1,5 @@
+import { DeleteIcon } from "../../icons/DeleteIcon";
+import { FileIcon } from "../../icons/FileIcon";
 import { ShareIcon } from "../../icons/ShareIcon";
 
 interface CardProps {
@@ -12,7 +14,7 @@ export function Card({ title, link, type }: CardProps) {
             <div className="flex justify-between">
                 <div className="flex items-center text-sm">
                     <div className="text-gray-500 pr-2">
-                        <ShareIcon size={"sm"} />
+                        <FileIcon />
                     </div>
                     {title}
                 </div>
@@ -22,7 +24,7 @@ export function Card({ title, link, type }: CardProps) {
                     </div>
                     <div className="text-gray-500">
                         <a href={link} target="_blank">
-                            <ShareIcon size={"sm"} />
+                            <DeleteIcon />
                         </a>
                     </div>
                 </div>
