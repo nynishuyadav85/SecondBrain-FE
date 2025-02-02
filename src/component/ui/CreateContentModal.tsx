@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { CloseIcon } from "../../icons/CloseIcon"
 import { Button } from "./Button"
+import { Input } from "./Input"
 
 export const CreateContentModal = ({ open, onClose }) => {
     return (
@@ -26,11 +27,4 @@ export const CreateContentModal = ({ open, onClose }) => {
             </div>}
         </div>
     )
-}
-
-
-function Input({ onChange, placeholder }: { onChange: () => void; placegholder: string }) {
-    return <div>
-        <input placeholder={placeholder} type="text" onChange={onChange} className="px-4 py-2 border rounded m-2"></input>
-    </div>
 }

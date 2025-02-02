@@ -7,6 +7,7 @@ interface ButtonProps {
     startIcon?: ReactElement;
     endIcon?: ReactElement;
     onClick?: () => void;
+    loading?: boolean;
 }
 
 const variantStyles = {
@@ -24,7 +25,7 @@ const defaultStyles = "rounded-md px-4 py-2 font-light flex items-center"
 
 export const Button = (props: ButtonProps) => {
     return (
-        <button onClick={props.onClick} className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}><div className="pr-2">{props.startIcon}</div> {props.text} {props.endIcon}</button>
+        <button onClick={props.onClick} className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]} ${props.loading ? "opacity-45" : ""}`} disabled={props.loading}><div className="pr-2">{props.startIcon}</div> {props.text} {props.endIcon}</button>
     )
 }
 
